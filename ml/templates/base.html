@@ -1,0 +1,74 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <title>{% block title %}{% endblock title %}</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% block css %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% endblock css %}
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Favicons -->
+    <link href="{% static 'img/favicon.png' %}" rel="icon">
+    <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/icofont/icofont.min.css'  %}" rel="stylesheet">
+    <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/venobox/venobox.css'  %}" rel="stylesheet">
+    <link href="{% static 'vendor/owl.carousel/assets/owl.carousel.min.css'  %}" rel="stylesheet">
+</head>
+
+<body>
+    <!-- ======= Header ======= -->
+    <header id="header">
+        <div class="container d-flex align-items-center">
+
+            <h1 class="logo mr-auto"><a href="{% url 'index' %}" style="text-decoration: none;">RealEstate</a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+            <nav class="nav-menu d-none d-lg-block">
+                <ul>
+                    <li class="active"><a href="{% url 'index' %}" style="text-decoration: none;">Home</a></li>
+                    <li class="active"><a href="{% url 'predict' %}" style="text-decoration: none;">Predict Price</a>
+                    </li>
+                </ul>
+            </nav><!-- .nav-menu -->
+
+            <a href="{% url 'analysis' %}" class="get-started-btn scrollto" style="text-decoration: none;">Analysis
+                Prediction</a>
+
+        </div>
+    </header><!-- End Header -->
+    {% block home %}{% endblock home %}
+    {% block predict %}{% endblock predict %}
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- Vendor JS Files -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'vendor/waypoints/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'vendor/counterup/counterup.min.js' %}"></script>
+    <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'vendor/venobox/venobox.min.js' %}"></script>
+    <script src="{% static 'vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+
+    <!-- Template Main JS File -->
+
+
+</body>
+
+</html>

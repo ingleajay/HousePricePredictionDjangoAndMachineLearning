@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} HousePricePredication {% endblock title %}
+{% block predict %}
+<main id="main">
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg contact">
+        <!-- ======= Contact Section ======= -->
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>USA House Prediction</h2>
+                <p>Enter Data and get predicted price of house.</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3 d-flex align-items-stretch"></div>
+                <div class="col-lg-6 mt-5 mt-lg-0 d-flex align-items-stretch ">
+                    <form action="result" class="php-email-form">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="n1">Avg Area Income</label>
+                                <input type="text" name="n1" class="form-control" id="n1" required />
+
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="n2">Avg Area House Age</label>
+                                <input type="text" name="n2" class="form-control" id="n2" required />
+
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="n3">Avg Area Number of Rooms</label>
+                                <input type="text" name="n3" class="form-control" id="n3" required />
+
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="n4">Avg Area Number of Bedrooms</label>
+                                <input type="text" name="n4" class="form-control" id="n4" required />
+
+                            </div>
+                        </div>
+
+                        <div class="form-group ">
+                            <label for="n5">Avg Area Population</label>
+                            <input type="text" name="n5" class="form-control" id="n5" required />
+                        </div>
+
+                        <div class="text-center"><button type="submit">Predict</button></div>
+                        <div class="text-center" style="margin-top: 10px; font-weight: bold;">
+                            <p>{{result2}}</p>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="col-lg-3 d-flex align-items-stretch"></div>
+            </div>
+
+        </div>
+
+    </section><!-- End Services Section -->
+
+</main><!-- End #main -->
+
+{% endblock predict %}

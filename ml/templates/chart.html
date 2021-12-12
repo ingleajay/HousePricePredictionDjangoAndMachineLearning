@@ -1,0 +1,85 @@
+{% extends 'basedash.html' %}
+{% load static %}
+{% block charts %}
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <!-- <h1 class="h3 mb-0 text-gray-800"></h1> -->
+        <a href="#" class="d-none d-sm-inline-block btn btn-md btn-success ">Real Time Analysis Charts
+        </a>
+    </div>
+
+    <div class="row">
+
+        <div class="col-lg-6">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Analysis on Avg Area income :</h6>
+                </div>
+                <div class="card-body">
+                    <img src="{% static 'img/income.png' %}">
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Analysis on Avg Area Population :</h6>
+                </div>
+                <div class="card-body">
+                    <img src="{% static 'img/population.png' %}">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Analysis on Avg Area Price:</h6>
+                </div>
+                <div class="card-body">
+                    <img src="{% static 'img/price.png' %}">
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Analysis on Avg Area Rooms:</h6>
+                </div>
+                <div class="card-body">
+                    <img src="{% static 'img/rooms.png' %}">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="col-lg-6">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Analysis on Avg Area House Age :</h6>
+                </div>
+                <div class="card-body">
+                    <img src="{% static 'img/houseage.png' %}">
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Analysis on Price and Bedrooms :</h6>
+                </div>
+                <div class="card-body">
+                    <img src="{% static 'img/price_and_bedroom.png' %}">
+                </div>
+            </div>
+        </div>
+        <br>
+
+    </div>
+    <!-- End of Footer -->
+</div>
+{% endblock charts %}

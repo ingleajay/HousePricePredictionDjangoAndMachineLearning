@@ -1,0 +1,174 @@
+{% extends 'basedash.html' %}
+{% load static %}
+{% block dash %}
+<!-- Begin Page Content -->
+<div class="container-fluid">
+    <!-- Content Row -->
+
+    <div class="card">
+        <div class="card-header">
+            Calculated max no of Cofficient of following parameter and error approx :
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <!-- Earnings (Monthly) Card Example -->
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card border-left-primary shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                        Avg. Area Income</div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800" id="ngofollowers">
+                                        {{v1}}
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Earnings (Monthly) Card Example -->
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card border-left-success shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                        Avg. Area House Age</div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800" id="collect_amount">
+                                        {{v2}}
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Earnings (Monthly) Card Example -->
+                <div class="col-xl-3 col-md-6 mb-4 ">
+                    <div class="card border-left-info shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                        Total
+                                        Avg. Area Number of Rooms</div>
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col-auto">
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800" id="postcount">
+                                                {{v3}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pending Requests Card Example -->
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card border-left-warning shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                        Total
+                                        Avg. Area Number of Bedrooms</div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800" id="donate">
+                                        {{v4}}
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pending Requests Card Example -->
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card border-left-warning shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                        Total Area Population</div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800" id="donate">
+                                        {{v5}}
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 mb-4">
+                    <div class="card border-left-success shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                        Available Data set Link : </div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800" id="donate">
+                                        <a href="https://www.kaggle.com/vedavyasv/usa-housing"
+                                            style="font-size: 17px;">USA_Housing
+                                            Dataset</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 mb-4">
+                    <div class="card border-left-primary shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                        Prediction Mean Absolute Error Approx :</div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800" id="donate">
+                                        <h4 style="font-weight: bold; margin-left: 10px;">{{error}}</h4>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 10px;">
+        <div class="col-lg-6">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary"> Analysis on Price and no of rooms :
+                    </h6>
+                </div>
+                <div class="card-body">
+                    <img src="{% static 'img/price_and_room.png' %}">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary"> Analysis on Price and House Age :
+                    </h6>
+                </div>
+                <div class="card-body">
+                    <img src="{% static 'img/price_and_house.png' %}">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock dash %}

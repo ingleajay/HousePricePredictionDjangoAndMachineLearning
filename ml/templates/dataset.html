@@ -1,0 +1,46 @@
+{% extends 'basedash.html' %}
+{% load static %}
+{% block dataset %}
+<div class="container-fluid">
+    <!-- Content Row -->
+
+    <div class="card">
+        <div class="card-header">
+            USA House Prediction Table :
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="table-responsive" style="margin-top: 15px;">
+                    <table class="table table-bordered " width="100%" cellspacing="0" id="myTable">
+                        <thead class="table-success">
+                            <tr>
+                                <th>Avg.Area Income</th>
+                                <th>Avg.Area Houseage</th>
+                                <th>Avg.Area Rooms</th>
+                                <th>Avg.Area Population</th>
+                                <th>Address</th>
+                                <th>Avg.Area Price</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablefilter">
+                            {% for i in dataset %}
+                            <tr>
+                                <td>{{i.Income}}</td>
+                                <td> {{i.Houseage}}</td>
+                                <td> {{i.Rooms}}</td>
+                                <td> {{i.Population}}</td>
+                                <td> {{i.Address}}</td>
+                                <td> {{i.Price}}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- /.container-fluid -->
+{% endblock dataset %}
